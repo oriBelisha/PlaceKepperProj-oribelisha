@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/settings.css" />
+  </head>
+  <body onload="onSetSettings()">
+    <header>
+      <div>
+        <a href="main.html">Main</a>
+        <a href="map.html">Map</a>
+      </div>
+      <a href="user-settings.html">User Settings</a>
+    </header>
+    <main>
+      <section>
+        <form id="frmRegister" ">
+          <hr />
+          <div>
+            <label for="email">EMAIL:</label>
+            <input type="email" name="email" id="email" />
+          </div>
+          <hr />
+          <div>
+            <label for="age">AGE:</label>
+            <input
+              type="range"
+              name="age"
+              id="age"
+              min="18"
+              max="120"
+              value="54"
+              onchange="onShowAge(this.value)"
+            />
+            <span id="sAge">54</span>
+          </div>
+          <hr />
+          <!-- <h3 class="colors">colors-</h3> -->
+          <!-- <hr> -->
+
+          <div>
+            <label for="b-date">BIRTH DATE:</label>
+            <input type="date" name="b-date" id="b-date" />
+          </div>
+          <hr />
+          <div>
+            <label for="b-time">BIRTH TIME:</label>
+            <input type="time" name="b-time" id="b-time" />
+          </div>
+          <hr />
+          <div>
+            <label for="txt-color">TEXT COLOR:</label>
+            <input type="color" name="txt-color" id="txt-color" />
+          </div>
+          <hr />
+          <div>
+            <label for="bcg-color">BCG COLOR:</label>
+            <input type="color" name="bcg-color" id="bcg-color" />
+          </div>
+
+          <hr />
+          <!-- <input type="submit" name="submit" id="submit"> -->
+        </form>
+        <div class="submit">
+          <button onclick="onSubmit(event)" id="submit">SET</button>
+        </div>
+        <hr />
+      </section>
+    </main>
+    <script src="services/storageServices.js"></script>
+    <script src="services/utilServices.js"></script>
+    <script src="services/userServices.js"></script>
+    <script src="controller/userController.js"></script>
+    <script src="controller/mainController.js"></script>
+
+  </body>
+</html>

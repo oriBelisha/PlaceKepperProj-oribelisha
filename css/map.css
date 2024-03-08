@@ -1,0 +1,97 @@
+/* 
+ * Always set the map height explicitly to define the size of the div element
+ * that contains the map. 
+ */
+/* html, */
+@import url(main.css);
+
+* {
+  box-sizing: border-box;
+}
+
+.remove {
+  /* position: absolute; */
+  color: red;
+}
+.location-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+  /* justify-content: space-between; */
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0.5em;
+}
+.custom-button {
+  padding: 1em;
+  margin-right: 0.8em;
+  background-size: contain;
+  background-image: url("../imag/myLocation.png");
+  width: auto;
+  height: 2em;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+.title-div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-container {
+  gap: 0.7em;
+  width: 80vw;
+  height: 60vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+header {
+  position: absolute;
+  top: 0;
+}
+.locations-container {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.locations {
+  max-width: 35vw;
+  max-height: 90%;
+  padding: 0.7em;
+  background-color: rgba(169, 169, 169, 0.755);
+  gap: 1em;
+  /* height: 90%; */
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  /* justify-content: flex-start; */
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+#map {
+  width: 60%;
+  height: 100%;
+  margin: auto;
+}
+.location-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* 
+   * Optional: Makes the sample page fill the window. 
+   */

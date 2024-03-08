@@ -1,0 +1,53 @@
+@import url(main.css);
+
+* {
+  box-sizing: border-box;
+}
+h3 {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+main .submit {
+  justify-content: center;
+}
+main div {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  align-items: center;
+  height: 5vh;
+  /* background: #a6870b99; */
+  /* padding: 5px; */
+  margin: 7px;
+}
+div input,
+label,
+button {
+  cursor: pointer;
+}
+#submit {
+  padding: 6px;
+  color: white;
+  background: red;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  background-image: url(/imag/user-settings.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+main {
+  /* width: 45vw; */
+  /* gap: 10px; */
+  background-color: rgba(169, 169, 169, 0.368);
+  min-width: fit-content;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML5 Geolocation</title>
+    <link rel="stylesheet" href="css/map.css" />
+  </head>
+
+  <body onload="onGetPosition(); onRender()">
+    <header>
+      <div>
+        <a href="main.html">Main</a>
+        <a href="map.html">Map</a>
+      </div>
+      <a href="user-settings.html">User Settings</a>
+    </header>
+    <section class="main-container">
+      <div id="map" style="width: 100%; height: 500px">
+        <div class="custom-button"></div>
+      </div>
+      <aside class="locations">
+        <div class="locations-title">SAVED LOCATIONS</div>
+        <hr />
+        <div class="locations-container">x</div>
+      </aside>
+    </section>
+    <!-- <h2>Current Position:</h2>
+    <table border="1">
+      <tr>
+        <td>Latitude</td>
+        <td id="latitude"></td>
+      </tr>
+      <tr>
+        <td>Longitude</td>
+        <td id="longitude"></td>
+      </tr>
+      <tr>
+        <td>Accuracy</td>
+        <td id="accuracy"></td>
+      </tr>
+      <tr>
+        <td>Timestamp</td>
+        <td id="timestamp"></td>
+      </tr>
+    </table>
+
+    <p id="locationError"></p> -->
+
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbyPXTx1oEHo7GuGT7jNdpIiub6J-XQv8"
+    ></script>
+    <script src="services/storageServices.js"></script>
+    <script src="services/utilServices.js"></script>
+    <script src="services/placeServices.js"></script>
+    <script src="controller/mapController.js"></script>
+    <script src="controller/mainController.js"></script>
+  </body>
+</html>
