@@ -42,7 +42,6 @@ function onSubmit(event) {
 function getTimeTillNextBday() {}
 
 function getAge(dateString) {
-  debugger;
   var today = new Date();
   var birthDate = new Date(dateString);
   var age = today.getFullYear() - birthDate.getFullYear();
