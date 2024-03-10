@@ -8,20 +8,49 @@ function getElVal(key) {
 }
 
 function onSubmit(event) {
+  var age = parseInt(getElVal("#age"));
+  var birthDate = getElVal("#b-date");
+  var ageCheck = getAge(birthDate);
+  var color = getElVal("#txt-color");
+  var bcgColor = getElVal("#bcg-color");
+  var birthTime = getElVal("#b-time");
+  if (bcgColor === color) {
+    alert("ERROR: cant set identical colors!");
+    return;
+  }
+  if (age !== ageCheck) {
+    alert("ERROR: age and birth date doesnt match");
+    return;
+  }
+
   var user = {
     email: getElVal("#email"),
-    age: parseInt(getElVal("#age")),
-    birthDate: getElVal("#b-date"),
-    birthTime: getElVal("#b-time"),
-    color: getElVal("#txt-color"),
-    bcgColor: getElVal("#bcg-color"),
+    age,
+    birthDate,
+    birthTime,
+    color,
+    bcgColor,
+    gender: getElVal("#gender"),
   };
   event.stopPropagation();
   console.log("user ", user);
   console.log("ev", event);
   setUserData(user);
   location.reload();
-  //   onSetSettings();
+}
+
+function getTimeTillNextBday() {}
+
+function getAge(dateString) {
+  debugger;
+  var today = new Date();
+  var birthDate = new Date(dateString);
+  var age = today.getFullYear() - birthDate.getFullYear();
+  var m = today.getMonth() - birthDate.getMonth();
+  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+    age--;
+  }
+  return age;
 }
 
 // function onSetSettings() {

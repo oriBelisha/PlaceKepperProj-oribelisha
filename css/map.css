@@ -65,11 +65,8 @@ header {
   padding: 0.7em;
   background-color: rgba(169, 169, 169, 0.755);
   gap: 1em;
-  /* height: 90%; */
   display: flex;
   flex-direction: column;
-  /* align-items: flex-start; */
-  /* justify-content: flex-start; */
 }
 body {
   display: flex;
@@ -81,6 +78,9 @@ body {
   margin: 0;
   padding: 0;
 }
+button {
+  cursor: pointer;
+}
 
 #map {
   width: 60%;
@@ -88,6 +88,7 @@ body {
   margin: auto;
 }
 .location-title {
+  flex-direction: column;
   display: flex;
   align-items: center;
   justify-content: center;

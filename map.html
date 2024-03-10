@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="css/map.css" />
   </head>
 
-  <body onload="onGetPosition(); onRender()">
+  <body onload="onGetPosition(); onRender();setCountdown()">
     <header>
       <div>
         <a href="index.html">Main</a>
@@ -18,32 +18,23 @@
         <div class="custom-button"></div>
       </div>
       <aside class="locations">
-        <div class="locations-title">SAVED LOCATIONS</div>
+        <div
+          style="font-weight: 300; font-size: larger"
+          class="locations-title"
+        >
+          Saved locations
+        </div>
         <hr />
         <div class="locations-container">x</div>
       </aside>
     </section>
-    <!-- <h2>Current Position:</h2>
-    <table border="1">
-      <tr>
-        <td>Latitude</td>
-        <td id="latitude"></td>
-      </tr>
-      <tr>
-        <td>Longitude</td>
-        <td id="longitude"></td>
-      </tr>
-      <tr>
-        <td>Accuracy</td>
-        <td id="accuracy"></td>
-      </tr>
-      <tr>
-        <td>Timestamp</td>
-        <td id="timestamp"></td>
-      </tr>
-    </table>
 
-    <p id="locationError"></p> -->
+    <a href="#" download="eported-data.csv" onclick="downloadCSV(this)"
+      >Download CSV file</a
+    >
+    <script>
+      // debugger
+    </script>
 
     <script
       async

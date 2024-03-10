@@ -7,6 +7,25 @@ if (!getLocationsArr() || !getLocationsArr().length) {
   saveToStorage("locations", gLocationsArr);
 }
 
+var datax = getData();
+function getData() {
+  var data = [["name", "lat", "lng"]];
+  var arr = getLocationsArr();
+  arr.forEach((item) => {
+    data.push([item.name, item.pos.lat, item.pos.lng]);
+  });
+  return data;
+}
+createCsv(datax);
+function createCsv() {
+  var arr = getData();
+  var csvContent = "";
+  arr.forEach((item) => {
+    csvContent += item.join(",") + "\n";
+  });
+  console.log(csvContent);
+  return csvContent;
+}
 function manageAddPlace(obj) {
   var locationsArr = getLocationsArr();
   locationsArr.unshift(obj);
@@ -24,7 +43,7 @@ function removePlace(place) {
     return JSON.stringify(item.pos) === JSON.stringify(place);
   });
   locArr.splice(idx, 1);
-  console.log("2", locArr);
+  // console.log("2", locArr);
   saveToStorage("locations", locArr);
-  console.log("idx", idx);
+  // console.log("idx", idx);
 }

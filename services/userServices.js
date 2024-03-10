@@ -5,3 +5,7 @@ function setUserData(user) {
   saveToStorage(USERDATA, user);
   if (!userData) loadFromStorage(USERDATA);
 }
+
+function getUsersBirthDate() {
+  return getUserData().birthDate;
+}

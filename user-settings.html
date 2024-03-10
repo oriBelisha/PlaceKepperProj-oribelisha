@@ -6,25 +6,26 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/settings.css" />
   </head>
-  <body onload="onSetSettings()">
+  <body onload="onSetSettings();">
     <header>
       <div>
         <a href="index.html">Main</a>
         <a href="map.html">Map</a>
       </div>
-      <a href="user-settings.html">User Settings</a>
+      <a href="user-settings.html" >User Settings</a>
     </header>
     <main>
       <section>
-        <form id="frmRegister" ">
+        <form onsubmit="onSubmit(event)" id="frmRegister" ">
+          <h2 style="font-weight: 100; margin-left: 0.3em;">Fill in your info</h2>
           <hr />
           <div>
-            <label for="email">EMAIL:</label>
-            <input type="email" name="email" id="email" />
+            <label for="email">Email:</label>
+            <input  type="email" name="email" id="email" required/>
           </div>
           <hr />
           <div>
-            <label for="age">AGE:</label>
+            <label for="age">Age:</label>
             <input
               type="range"
               name="age"
@@ -33,42 +34,57 @@
               max="120"
               value="54"
               onchange="onShowAge(this.value)"
+              required
             />
             <span id="sAge">54</span>
           </div>
           <hr />
+          <div>
+            <label for="gender">Gender:</label>
+            <select name="gender" id="gender" required>
+              <option value="" disabled selected>Choose your gender</option>
+              <option value="male" >Male</option>
+              <option value="female" >Female</option>
+              <option value="other" >Other</option>
+            </select>
+
+          </div>
+          <hr>
           <!-- <h3 class="colors">colors-</h3> -->
           <!-- <hr> -->
 
           <div>
-            <label for="b-date">BIRTH DATE:</label>
-            <input type="date" name="b-date" id="b-date" />
+            <label for="b-date">Birth date:</label>
+            <input  type="date" name="b-date" id="b-date" required />
           </div>
           <hr />
           <div>
-            <label for="b-time">BIRTH TIME:</label>
-            <input type="time" name="b-time" id="b-time" />
+            <label for="b-time">Birth time:</label>
+            <input type="time" name="b-time" id="b-time" required />
           </div>
           <hr />
           <div>
-            <label for="txt-color">TEXT COLOR:</label>
+            <label for="txt-color">Text color:</label>
             <input type="color" name="txt-color" id="txt-color" />
           </div>
           <hr />
           <div>
-            <label for="bcg-color">BCG COLOR:</label>
-            <input type="color" name="bcg-color" id="bcg-color" />
+            <label for="bcg-color">Bcg color:</label>
+            <input value="#ffffff" type="color" name="bcg-color" id="bcg-color" />
           </div>
 
-          <hr />
+        <hr>
+         
           <!-- <input type="submit" name="submit" id="submit"> -->
+          <div class="submit">
+            <button id="submit">SET</button>
+          </div>
         </form>
-        <div class="submit">
-          <button onclick="onSubmit(event)" id="submit">SET</button>
-        </div>
         <hr />
       </section>
+      
     </main>
+  
     <script src="services/storageServices.js"></script>
     <script src="services/utilServices.js"></script>
     <script src="services/userServices.js"></script>
